@@ -1,4 +1,4 @@
-// const API_KEY = "99e0f41f8d8db51546c5e5778e73d648";
+const API_KEY = "99e0f41f8d8db51546c5e5778e73d648";
 
 // let theDate = new Date()
 // document.getElementById("currentDate").innerHTML = `${theDate.getDay()}, ${theDate.getDate()} ${theDate.getMonth()} ${theDate.getYear()}`
@@ -32,6 +32,7 @@ async function getWeather(city) {
         document.getElementById("cityName").innerHTML = `Weather in ${data.name}`
         document.getElementById("weatherIcon").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
         document.getElementById("currentWind").innerHTML = `Wind: ${data.wind.speed}Km/h`
+        document.getElementById("devider").style.visibility = "visible"
         document.getElementById("currentHumidity").innerHTML = `Humidity: ${data.main.humidity}`
         document.getElementById("currentCondition").innerHTML = `Condition: ${data.weather[0].main}`
         document.getElementById("errorMessage").innerHTML = ""
